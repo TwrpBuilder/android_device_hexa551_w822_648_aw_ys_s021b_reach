@@ -15,8 +15,8 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-PRODUCT_DEVICE := w822_648_aw_ys_s021b_reach
-PRODUCT_NAME := omni_w822_648_aw_ys_s021b_reach
-PRODUCT_BRAND := hexa551
+PRODUCT_DEVICE := hexa551
+PRODUCT_NAME := omni_hexa551
+PRODUCT_BRAND := reach
 PRODUCT_MODEL := HEXA551
-PRODUCT_MANUFACTURER := hexa551
+PRODUCT_MANUFACTURER := reach

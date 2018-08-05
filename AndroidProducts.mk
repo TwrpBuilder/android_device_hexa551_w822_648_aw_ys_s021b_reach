@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/hexa551/w822_648_aw_ys_s021b_reach/
+LOCAL_PATH := device/reach/hexa551/
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_w822_648_aw_ys_s021b_reach.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_hexa551.mk

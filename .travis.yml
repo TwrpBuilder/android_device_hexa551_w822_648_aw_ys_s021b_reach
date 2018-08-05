@@ -9,18 +9,18 @@ before_script:
     -O $HOME/twrp.tar.xz
   - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_hexa551_w822_648_aw_ys_s021b_reach.git device/hexa551/w822_648_aw_ys_s021b_reach
+  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_reach_hexa551.git device/reach/hexa551
   - git clone https://github.com/TwrpBuilder/device_generic_twrpbuilder.git device/generic/twrpbuilder
   - git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery --depth=1
   - |
     docker run --rm -i -v "$(pwd):/root/twrp/:rw,z" surendrajat/twrp-builder bash << EOF
     cd /root/twrp/
-    source build/envsetup.sh && lunch omni_w822_648_aw_ys_s021b_reach-eng && make -j16 recoveryimage
+    source build/envsetup.sh && lunch omni_hexa551-eng && make -j16 recoveryimage
     exit
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/w822_648_aw_ys_s021b_reach/recovery.img $HOME/twrp/TWRP-$version-w822_648_aw_ys_s021b_reach-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/hexa551/recovery.img $HOME/twrp/TWRP-$version-hexa551-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
@@ -30,7 +30,7 @@ deploy:
   file: $HOME/twrp/*.img
   on:
     tags: false
-    repo: TwrpBuilder/android_device_hexa551_w822_648_aw_ys_s021b_reach
+    repo: TwrpBuilder/android_device_reach_hexa551
     branch: master
 branches:
   except:

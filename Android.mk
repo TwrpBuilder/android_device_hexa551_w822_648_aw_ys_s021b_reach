@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter w822_648_aw_ys_s021b_reach,$(TARGET_DEVICE)),)
+ifneq ($(filter hexa551,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/hexa551/w822_648_aw_ys_s021b_reach/
+LOCAL_PATH := device/reach/hexa551/
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

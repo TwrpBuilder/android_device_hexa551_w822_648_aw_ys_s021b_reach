@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/hexa551/w822_648_aw_ys_s021b_reach
+LOCAL_PATH := device/reach/hexa551
 
 TARGET_BOARD_PLATFORM := mt6580
-TARGET_BOOTLOADER_BOARD_NAME := w822_648_aw_ys_s021b_reach
+TARGET_BOOTLOADER_BOARD_NAME := hexa551
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
